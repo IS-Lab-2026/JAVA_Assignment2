@@ -38,9 +38,6 @@ An interactive Java Swing decision-tree form in Apache NetBeans (`com.mycompany.
 - **Ring = No + Gills = Yes + Convex cup = No** $\rightarrow$ *Girolle*
 - **Ring = No + Gills = No** $\rightarrow$ *Cepe de bordeau*
 
-## Project Structure
-- `src/main/java/com/mycompany/gui_main/Mushroom.java` — Swing `JFrame` form, `btnexecuteActionPerformed`, and `btnCancelActionPerformed`.
-- `src/main/java/com/mycompany/gui_main/Welcome.java` — Frame opened on **Cancel**.
 
 ## How to Run
 1. Open the `GUI_main` project in Apache NetBeans.
