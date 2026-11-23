@@ -33,5 +33,5 @@ A small Java Swing application with a main menu and three forms.
 
 ## Author
 Name: Agasaro Sylivie Benigne
-Reg No: ________
+Reg No: 225062986
 University of Rwanda, Information Systems
