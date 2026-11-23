@@ -1,4 +1,4 @@
-# StitchLab
+# JavaswingProject
 
 A small Java Swing application with a main menu and three forms.
 
