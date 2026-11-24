@@ -3,13 +3,13 @@
 A simple Java Swing application that launches and centers the `Welcome` GUI window.
 
 ## What It Does
-* Instantiates the `Welcome` frame (`new Welcome()`).
-* Displays the window on screen (`setVisible(true)`).
-* Centers the window on the display (`setLocationRelativeTo(null)`).
+* Instantiates the Welcome frame (new Welcome()).
+* Displays the window on screen (setVisible(true)).
+* Centers the window on the display (setLocationRelativeTo(null)).
 
 ## Requirements
 * **Java Development Kit (JDK):** Version 8 or higher.
-* **`Welcome.java`:** Must exist in the same package/project (extending `javax.swing.JFrame`).
+* **`Welcome.java`:** Must exist in the same package/project (extending javax.swing.JFrame).
 
 ## How to Run
 Compile and run both files from your terminal:
@@ -39,7 +39,7 @@ javac Welcome.java BicycleRental.java Mushroom.java
 java Welcome
 
 
-# Bicycle Rental
+ Bicycle Rental
 
 A simple Java Swing application that calculates the cost of renting a bicycle based on the start and end hour of the rental. Prices are in Rwandan francs (RWF).
 
@@ -83,7 +83,7 @@ BTNclear:	Clears all text fields
 BTNcancel:	Returns to the Welcome window
 
 
-# Mushroom
+ Mushroom
 
 A simple Java Swing application that identifies a mushroom by answering four Yes/No questions.
 
