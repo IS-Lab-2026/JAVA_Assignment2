@@ -1,4 +1,5 @@
-# Java GUI Application Assignement
+NAME: ISHIMWE Olivier   225064676
+ # Java GUI Application Assignement
 
 ## 1. Project Overview
 
@@ -11,7 +12,7 @@ The application provides a graphical user interface (GUI) that allows users to p
 
 The main menu is implemented in `WELCOME.java`, which acts as the starting point of the application and allows users to choose which system they want to use.
 
----
+
 
 ## 2. Main Menu (WELCOME)
 
@@ -26,7 +27,7 @@ When a user selects either option, the corresponding window opens and the main m
 
 After finishing either system, the user can return to the main menu.
 
----
+
 
 ## 3. Bicycle Rental System
 
@@ -67,7 +68,6 @@ The Cancel button closes the Bicycle Rental System and returns the user to the m
 - Clear: Resets the input fields and result.
 - Cancel: Returns to the main menu.
 
----
 
 ## 4. Mushroom Identification System
 
