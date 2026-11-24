@@ -5,7 +5,7 @@ A Java Swing desktop application that combines two services behind one welcome s
 1. **Bicycle Rental Shop**: calculates a rental fee in RWF from a start hour and an end hour.
 2. **Mushroom Identifier**: identifies one of six mushrooms from a series of Yes/No answers.
 
-The project turns two console programs (`Scenario1` and `MushroomIdentifier`) into graphical interfaces built with the NetBeans GUI builder.
+The project turns two console programs (`Bicycle_Rental` and `MushroomIdentifier`) into graphical interfaces built with the NetBeans GUI builder.
 
 ---
 
@@ -27,7 +27,7 @@ The project turns two console programs (`Scenario1` and `MushroomIdentifier`) in
 | Frame | Purpose | Based on |
 |---|---|---|
 | Welcome Frame | Entry point; lets the user choose a service or exit | None (navigation only) |
-| Bicycle Rental Frame | Rental fee calculator | `Scenario1.java` |
+| Bicycle Rental Frame | Rental fee calculator | `Bicycle_Rent.java` |
 | Mushroom Identifier Frame | Mushroom identification | `MushroomIdentifier.java` |
 
 > Rename the class names above to match your own files (for example `WelcomeForm`, `BicycleRental`, `MushroomIdentifierForm`).
