@@ -1,6 +1,6 @@
 # Java GUI Lab 2 Assignment
 
-**Registration Number:** [YOUR_REG_NUMBER]
+**Registration Number:** [225074638]
 
 ## About This Project
 This folder contains my Java Swing GUI submission for Lab 2. The program starts with two welcome screens and lets the user open either the Bicycle Rental Calculator or the Mushroom Identifier.
