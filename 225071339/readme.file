@@ -1,1 +1,109 @@
+ Java GUI Applications
+
+This project contains two small Java Swing applications: 'Mushroom
+Guessing' and 'Bicycle Rental'. Both applications use graphical forms
+in NetBeans, allowing the user to enter or select information and see a
+result on the screen.
+
+Both classes are in the com.mycompany.gui package.
+
+ 1. Mushroom Guessing
+
+ About the application
+
+The Mushroom Guessing application asks a series of Yes/No questions and
+uses the answers to identify a mushroom. The questions are answered by
+selecting radio buttons on the form.
+
+ Questions
+
+-   Does it have a ring?
+-   Does it have gills?
+-   Does it have a convex cup?
+-   Does it grow in a forest?
+
+ Possible results
+
+  Answers                                  Mushroom displayed
+  ---------------------------------------- --------------------
+  Ring: Yes; Forest: Yes                   Amanite tue-mouche
+  Ring: Yes; Forest: No; Convex cup: Yes   Agaric Jaunissant
+  Ring: Yes; Forest: No; Convex cup: No    Coprin chevelu
+  Ring: No; Gills: No                      Cepe de bordeau
+  Ring: No; Gills: Yes; Convex cup: Yes    Pied bleu
+  Ring: No; Gills: Yes; Convex cup: No     Girolle
+
+The program uses nested `if-else` statements to check the selected
+answers. Each question has its own `ButtonGroup`, so the user can select
+either Yes or No for that question.
+
+ How to use it
+
+1.  Run the `Mushroom` class to open the form.
+2.  Select Yes or No for the ring question.
+3.  Answer the other questions needed for the path you selected.
+4.  Click **Action** to see the mushroom name in the result field.
+5.  Click **Cancel** to open the `WELCOME` window.
+
+If a required answer has not been selected, the form displays "Invalid
+input".
+
+
+
+ 2. Bicycle Rental
+
+ About the application
+
+The Bicycle Rental application calculates the rental cost using the
+start time and end time entered by the user. The user enters the times
+as whole numbers, and the application displays the total cost in RWF.
+
+ Information to enter
+
+-   Start time: an integer from 0 to 23.
+-   End time: an integer from 1 to 24.
+
+The end time must be later than the start time. The application
+calculates the number of rental hours by subtracting the start time from
+the end time.
+
+ Rental calculation
+
+The program selects an hourly rate of 500 RWF, 1,000 RWF, or 1,500
+RWF according to the start-time and end-time conditions written in the
+code.
+
+The total is calculated using:
+
+Total cost = Number of hours × Hourly rate
+
+ How to use it
+
+1.  Run the Bicycle_rental class to open the form.
+2.  Enter the start time in the Start time field.
+3.  Enter the end time in the End time field.
+4.  Click Calculate to display the total rental cost.
+5.  Click Cancel to open the WELCOME window.
+
+If the entered values are not valid numbers, the form displays
+"Invalid". It also displays an error message if the start or end time
+is outside the accepted range, or if the start time is not earlier than
+the end time.
+
+Note: The current program accepts rentals that start and end on the
+same day. It does not calculate rentals that continue past midnight
+
+Project classes
+
+  
+  Class                               Purpose
+  
+  Mushroom                          Identifies a mushroom from the
+                                      user's Yes/No answers.
+
+  Bicycle_rental                   Calculates the bicycle rental cost
+                                      from the entered times.
+
+  WELCOME                           The welcome window opened by the
+                                      Cancel buttons.
 
