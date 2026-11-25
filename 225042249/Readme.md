@@ -55,3 +55,37 @@ Girolle
 Conclusion
 
 This program uses IF and ELSE to check the user's choices and decide which mushroom name to display. It is a simple example of how Java makes decisions using conditions.
+
+README – Parking Cost Calculator
+How IF and ELSE Work
+
+In my code, I used IF and ELSE to check the time and decide how much someone should pay for parking.
+
+First, the program checks if the time entered is correct.
+
+If the starting time is below 0 or above 23, it shows "Invalid time."
+If the ending time is below 1 or above 24, it also shows "Invalid time."
+If the starting time is bigger than or equal to the ending time, it shows "Invalid time."
+
+If the time is correct, the program continues.
+
+How the Parking Prices Work
+
+The program checks each hour and gives it a price.
+
+IF the hour is before 7 AM or after 9 PM, the price is 500 RWF.
+ELSE IF the hour is between 7 AM and 2 PM, or between 7 PM and 9 PM, the price is 1,000 RWF.
+ELSE the price is 1,500 RWF (between 2 PM and 7 PM).
+How WHILE Works
+
+The WHILE loop counts the parking hours one by one.
+
+For every hour, it adds the price to the total.
+
+Final Result
+
+At the end, the program adds all the prices and shows the total amount in the text field.
+
+Conclusion
+
+In simple words, IF and ELSE help my program choose the parking price. The WHILE loop counts the hours, and the program calculates how much the person needs to pay.
