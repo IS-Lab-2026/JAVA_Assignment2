@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 import javax.swing.SwingUtilities;
 
 public class Main {
@@ -43,9 +45,20 @@ public class Main {
       });
 
       GUI.backBRC.addActionListener(e ->{   
+      GUI.StartingTime.setText("");
+      GUI.EndingTime.setText("");  
       GUI.BRC.dispose();  
       GUI.WelcomeGUI.setVisible(true);
     });
+
+      GUI.check.addActionListener(e ->{
+        String startTime = GUI.StartingTime.getText().trim();
+        String EndingTime = GUI.EndingTime.getText().trim();
+        int startingTime = Integer.parseInt(startTime);
+        int endTime = Integer.parseInt(EndingTime);
+
+        rentcheck(startingTime, endTime, GUI);
+      });
  });
 }
     private static void processChoice(boolean choice, int[] step, boolean[] answer, boolean[] answer2, boolean[] answer3, MushGUI GUI) {
@@ -91,6 +104,35 @@ public class Main {
     private static void finishGame(String mushroomName, int[] step, MushGUI GUI) {
         GUI.Yes.setEnabled(false);
         GUI.No.setEnabled(false);
-        GUI.Out.setText("\tYour Mushroom is " + mushroomName);
+        GUI.Out.setText("\t Your Mushroom is " + mushroomName);
     }
+    private static void rentcheck(int startingTime,int endTime,MushGUI GUI){
+    int totalHours;
+        int totalRent = 0;
+        totalHours = startingTime;
+          
+          if (endTime > startingTime){
+            
+             if((startingTime >= 0 && startingTime <=23) && (endTime >=1 && endTime <= 24)){
+              while(totalHours < endTime){
+           if((totalHours>=0 && totalHours < 7) || (totalHours>=21 && totalHours<=24)){
+             totalRent += 500;
+             totalHours++;
+           }else if((totalHours>=7 && totalHours<14) || (totalHours>=19 && totalHours < 21)){
+            totalRent += 1000;
+            totalHours++;
+           }else if ((totalHours>=14 && totalHours< 19))  {
+              totalRent +=1500;
+              totalHours++;
+           }
+        } }
+        }
+        
+        
+        
+          GUI.OutBRC.setText(String.valueOf(totalRent));
+          
+        
+   }
 }
+   
