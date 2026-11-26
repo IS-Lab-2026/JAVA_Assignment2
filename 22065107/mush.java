@@ -186,7 +186,18 @@ public class mush extends javax.swing.JFrame {
         char r=jTextArea3.getText().trim().charAt(0);
         char c=jTextArea1.getText().trim().charAt(0);
         String result= new mushroom().getmush(g,f,r,c);
-        jTextArea5.setText(result);
+        if (!isYesNo(g) || !isYesNo(f) || !isYesNo(r) || !isYesNo(c)) {
+        jTextArea5.setText("Please answer y or n in every box");
+        return;
+    }
+
+    String result = mus.getmush(g.charAt(0), f.charAt(0), r.charAt(0), c.charAt(0));
+    jTextArea5.setText(result);
+}
+
+private boolean isYesNo(String s) {
+    return s.equals("y") || s.equals("n");
+}
     }//GEN-LAST:event_saveActionPerformed
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
