@@ -6,8 +6,10 @@ This program is a Java Swing program with three windows. The user starts at the
 Welcome window and chooses one of two small applications: Bicycle Rental
 or Mushroom. All three classes are in the package "Welcome".
 
- Welcome:The main class i.This is the class you run.
- Bicyclerental:Calculate the cost of renting a Bicycle.
+ Welcome:The main class i.e This is the class you run.
+ 
+ Bicyclerental: Calculate the cost of renting a Bicycle.
+ 
  Mushroom: Finds a mushroom by asking Yes or No questions.
 
 
@@ -29,12 +31,16 @@ The program then calculates the total cost.
 
 Buttons:
     Calculate Cost: Shows the total cost in RWF.
+    
     Clear :Resets the hours and the cost.
+    
     Cancel :Closes this window and returns to Welcome.
 
 Price per hour:
     00:00 to 07:00 and 21:00 to 24:00    500 RWF
+    
     07:00 to 14:00 and 19:00 to 21:00    1000 RWF
+    
     14:00 to 19:00                       1500 RWF
 
 If the starting hour is not smaller than the ending hour, an error message
@@ -47,41 +53,45 @@ question. The program uses the answers to find the mushroom.
 
 Buttons:
     Yes / No   Answer the current question.
+    
     Restart    Go back to the first question.
+    
     Cancel     Close this window and return to Welcome.
 
-The program remembers the current question in a variable called "step".
+The program remembers the current question in a variable called "step
 
 Questions and results:
-    1. Does it have gills?
-    No ->Cepe de Bordeaux
-    
-    Yes -> go to question 2
-    
-    2. Does it grow in a forest?
-    
-    No  -> go to question 3
-    
-    Yes -> go to question 4
-    
-    3. Does it have a convex cup? (not in a forest)
-    
-    Yes -> Agaric jaunissant
-    
-    No  -> Coprin chevelu
-    
-    4. Does it have a convex cup? (in a forest)
-    
-    Yes -> Pied bleu
-    
-    No  -> go to question 5
-    
-    5. Does it have a ring?
-    
-    Yes -> Amanite tue-mouche
-    
-    No  ->Girolle
 
+1.Does it have Gills?
+
+No ->Cepe de Bordeaux
+
+Yes ->Go to question 2
+
+2.Does it glow in forest?
+
+No ->Go to question 3
+
+ Yes->Go to question 3
+
+ 3.Does it have a convex cup? (not in a foredt)
+
+ Yes ->Agaric jaunissant
+
+ No ->Coprin chevelu
+
+ 4.Does it have a convex cup? (in a forest)
+
+ Yes ->Pied bleu
+
+ No ->Go to question 5
+
+5.Does it have a ring?
+
+Yesv ->Amanite tue-mouche
+
+No ->Girolle
+    
 
 4. HOW THE CLASSES ARE CONNECTED
    
@@ -91,13 +101,18 @@ Questions and results:
     Welcome  ->  Mushroom       ->  back to Welcome
 
 Explanations;
+
     1. The user runs Welcome and sees the menu.
+    
     2. The user clicks Bicyclerental or Mushroom.
+    
     3. Welcome hides itself and creates the new window, giving itself to it:
            new BicycleRental(this)
            new Mushroom(this)
        Here, "this" means the Welcome window.
+       
     4. The new window stores this Welcome window in a variable.
+    
     5. When the user clicks Cancel or closes the window, it calls
        dispose() to close itself, then welcome.setVisible(true) to show
        the menu again.
@@ -115,9 +130,12 @@ They need a Welcome window to be created, so they cannot start by themselves.
    
 
     1. Put the three files in the package "Welcome".
-    2. Run Welcome.java.
-    3. Click a button to open a window, and Cancel to return to the menu.
-    4. If changes do not appear, use Clean and Build, then run again.
+       
+    3. Run Welcome.java.
+  
+    5. Click a button to open a window, and Cancel to return to the menu.
+       
+    7. If changes do not appear, use Clean and Build, then run again.
 
 
 
