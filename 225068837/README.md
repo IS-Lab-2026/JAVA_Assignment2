@@ -1,14 +1,14 @@
- Java Programming Projects
+# Java Programming Projects
 
- Project Description
+## Project Description
 
 This repository showcases a collection of Java applications developed with Java Swing for graphical user interfaces (GUI). The applications demonstrate practical uses of fundamental programming skills, including input handling, decision-making, repetition, calculations, and GUI development.
 
 The repository consists of three applications:
 
-1. Welcome Application**
-2. Bicycle Rental Management System**
-3. Mushroom Classification System**
+1. **Welcome Application**
+2. **Bicycle Rental Management System**
+3. **Mushroom Classification System**
 
 ---
 
@@ -17,12 +17,14 @@ The repository consists of three applications:
 The Welcome Application acts as the starting point of the project. It provides a simple interface where users can select the application they would like to access.
 
 ### Main Features
+
 - Presents users with a welcome screen.
 - Includes a button for accessing the Bicycle Rental System.
 - Provides another button to launch the Mushroom Identification System.
 - Uses Java Swing elements to build the graphical interface.
 
 ### Project Files
+
 - `GUI.java` – Starts the main Welcome window.
 - `Welcome.java` – Implements the welcome screen and its navigation buttons.
 - `Welcome.form` – Contains the form design information for the Welcome interface.
@@ -34,6 +36,7 @@ The Welcome Application acts as the starting point of the project. It provides a
 This application determines the amount a customer needs to pay for renting a bicycle. The total charge is calculated according to the rental starting time and ending time.
 
 ### Main Features
+
 - Allows users to enter the beginning and ending rental hours.
 - Checks whether the entered information is valid.
 - Determines the rental fee for every hour of use.
@@ -44,14 +47,15 @@ This application determines the amount a customer needs to pay for renting a bic
 ### Bicycle Rental Price Table
 
 | Rental Period | Hourly Charge |
-|---|---:|
-| 00:00 – 06:59 | 500 RWF |
-| 07:00 – 13:59 | 1,000 RWF |
-| 14:00 – 18:59 | 1,500 RWF |
-| 19:00 – 20:59 | 1,000 RWF |
-| 21:00 – 23:59 | 500 RWF |
+| ------------- | ------------- |
+| 00:00 – 06:59 | 500 RWF       |
+| 07:00 – 13:59 | 1,000 RWF     |
+| 14:00 – 18:59 | 1,500 RWF     |
+| 19:00 – 20:59 | 1,000 RWF     |
+| 21:00 – 23:59 | 500 RWF       |
 
 ### Project Files
+
 - `BicycleRental.java` – Implements the initial version of the rental program using the console.
 - `Rental.java` – Contains the graphical version of the Bicycle Rental System.
 - `Rental.form` – Stores the GUI form design when created with NetBeans.
@@ -63,12 +67,14 @@ This application determines the amount a customer needs to pay for renting a bic
 The Mushroom Identification System is an interactive application that identifies mushroom types using the characteristics selected by the user. It processes the answers and determines a result using predefined programming conditions.
 
 ### Main Features
+
 - Collects information about different mushroom characteristics.
 - Evaluates user responses through conditional statements.
 - Produces and displays the corresponding identification result.
 - Provides a graphical interface for user interaction.
 
 ### Project Files
+
 - `Mushroom.java` – Contains the graphical interface and mushroom identification functionality.
 - `Mushroom.form` – Stores the form layout when generated through NetBeans.
 
@@ -128,45 +134,10 @@ It also offers an opportunity to practice organizing Java code into different cl
 
 ---
 
-**Development Tool:** Visual Studio Code  
-**Programming Language:** Java  
-**GUI Technology:** Java Swing  
-**Project Name:** Java Programming Projects  
+**Development Tool:** Visual Studio Code\
+**Programming Language:** Java\
+**GUI Technology:** Java Swing\
+**Project Name:** Java Programming Projects\
 **Source Code Hosting:** GitHub
-— Destination frame opened when clicking Cancel
 
-How to Run
-
-Open the GUI_main project in Apache NetBeans.
-Make sure no stray methods sit outside public class Rental and no braces are unmatched.
-Run Rental.java (or the project main class).
-Mushroom Identification GUI (Mushroom.java)
-An interactive Java Swing decision-tree form in Apache NetBeans (package com.mycompany.gui_main) that determines mushroom species from Yes / No trait choices.
-
-Capabilities
-Guided Yes/No Questions: Radio buttons cover ring presence, forest habitat, convex cup shape, and gills.
-Result Output: The matched mushroom name appears in the Mushroom name field—or "Invalid input" if the selection path is incomplete.
-Selection Controls: Radio buttons can be grouped with ButtonGroups, selections are limited, answers can be cleared, and Cancel returns to Welcome.
-Decision Paths
-Ring = Yes + Forest = Yes
-→
-Amanite tue-mouche.
-Ring = Yes + Forest = No + Convex cup = Yes
-→
-Agaric Jaunissant.
-Ring = Yes + Forest = No + Convex cup = No
-→
-Coprin chevelu
-Ring = No + Gills = Yes + Convex cup = Yes
-→
-Pied bleu
-Ring = No + Gills = Yes + Convex cup = No
-→
-Girolle
-Ring = No + Gills = No
-→
-Cepe de bordeau
-How to Run
-Open the GUI_main project in Apache NetBeans.
-Assign each Yes/No radio button pair to its own ButtonGroup in Design view.
-Run Mushroom.java and choose options before clicking Execute.
+Make the wording more originalKeep every original file detail
