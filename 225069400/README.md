@@ -55,18 +55,31 @@ The program remembers the current question in a variable called "step".
 Questions and results:
     1. Does it have gills?
     No ->Cepe de Bordeaux
+    
     Yes -> go to question 2
+    
     2. Does it grow in a forest?
+    
     No  -> go to question 3
+    
     Yes -> go to question 4
+    
     3. Does it have a convex cup? (not in a forest)
+    
     Yes -> Agaric jaunissant
+    
     No  -> Coprin chevelu
+    
     4. Does it have a convex cup? (in a forest)
+    
     Yes -> Pied bleu
+    
     No  -> go to question 5
+    
     5. Does it have a ring?
+    
     Yes -> Amanite tue-mouche
+    
     No  ->Girolle
 
 
@@ -74,6 +87,7 @@ Questions and results:
    
 
     Welcome  ->  BicycleRental  ->  back to Welcome
+   
     Welcome  ->  Mushroom       ->  back to Welcome
 
 Explanations;
