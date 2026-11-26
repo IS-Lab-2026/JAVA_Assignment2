@@ -1,1 +1,26 @@
 
+Your Choice
+DESTINATION
+WE have a form having three buttons :
+1 bicycle :if you click it ,it will go directly to the Bicycle rent form  
+2 mushroom: if you click it,it will go directly to the mushroom identifier form
+3 exit: this will be used to terminate the program
+Bicycle rental
+
+Put in the hour you start and the hour you end, then press Save. The price per hour depends on the time:
+
+0 to 7 and 21 to 24: 500 RWF
+7 to 14 and 19 to 21: 1000 RWF
+14 to 19: 1500 RWF
+
+Example: 8 to 12 is 4 hours, so 4 x 1000 = 4000 RWF.
+
+If you enter hours that don't exist it says invalid hours, and if you type something that isn't a number it asks for numbers only.
+
+Mushroom identifier
+
+Answer the 4 questions with y or n (gills, forest, ring, convex cup) and press Save.
+
+no gills: Cepe de Bordeaux
+not in a forest and has a ring: Coprin chevelu
+anything else: Girolle
