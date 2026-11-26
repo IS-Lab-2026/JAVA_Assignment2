@@ -1,4 +1,4 @@
-# 🚲🍄 Bicycle & Mushroom Utility Suite
+# 🚲🍄 Bicycle & Mushroom Java App
 
 A clean, interactive Java Swing desktop application that combines two everyday utilities into one unified interface: a **Bicycle Rental Cost Calculator** and a step-by-step **Mushroom Identifier**.
 
