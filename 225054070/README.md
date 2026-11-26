@@ -9,11 +9,11 @@ This Java-based application combines two independent topics: Mushroom Identifica
 
 ## Topic 1: Mushroom Identification System
 
-This module focuses on identifying mushroom types based on their characteristics. It uses questions about mushroom features to help determine the mushroom type.
+This part focuses on identifying mushroom types based on their characteristics. It uses questions about mushroom features to help determine the mushroom type.
 
 ## Topic 2: Bicycle Rental System
 
-This module focuses on bicycle rental management. It accepts rental start and end times, validates the entered information, and calculates rental charges based on the rental duration and applicable hourly rates.
+This part focuses on bicycle rental management. It accepts rental start and end times, validates the entered information, and calculates rental charges based on the rental duration and applicable hourly rates.
 
 # 3. Core Functionalities
 
