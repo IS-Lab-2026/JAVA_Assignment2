@@ -8,7 +8,7 @@ package com.mycompany.gui_main;
  *
  * @author Gueest
  */
-public class GRAPHICA_USER_INTERFACE {
+public class GUI_main {
 
     public static void main(String[] args) {
         Welcome well = new Welcome();
