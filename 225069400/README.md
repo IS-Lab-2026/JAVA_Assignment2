@@ -1,7 +1,7 @@
-                 DESCRIPTION ABOUT PROGRAM
+             
+    
 
-
- INTRODUCTION
+ DESCRIPTION ABOUT PROGRAM
 
 This program is a Java Swing program with three windows. The user starts at the
 Welcome window and chooses one of two small applications: Bicycle Rental
