@@ -1,4 +1,4 @@
-DESCRIPTION ABOUT CODE
+                      DESCRIPTION ABOUT PROGRAM
 
  INTRODUCTION
 
@@ -6,12 +6,13 @@ This program is a Java Swing program with three windows. The user starts at the
 Welcome window and chooses one of two small applications: Bicycle Rental
 or Mushroom. All three classes are in the package "Welcome".
 
-    Welcome :The main class i.e This is the class you run.
-    BicycleRental: Calculates the cost of renting a bicycle.
-    Mushroom  :Finds a mushroom by asking Yes or No questions.
+ Welcome:The main class i.This is the class you run.
+ Bicyclerental:Calculate the cost of renting a Bicycle.
+ Mushroom: Finds a mushroom by asking Yes or No questions.
 
 
 1. THE WELCOME CLASS
+
 Welcome is the first window the user sees. It has three buttons:
  Bicyclerental: Opens the Bicycle Rental window.
  Mushroom: Opens the Mushroom window.
@@ -22,6 +23,7 @@ a main method, and closing it ends the whole program.
 
 
 2. THE BICYCLERENTAL CLASS
+
 The user chooses a starting hour (0 to 23) and an ending hour (1 to 24).
 The program then calculates the total cost.
 
@@ -39,6 +41,7 @@ If the starting hour is not smaller than the ending hour, an error message
 is shown.
 
 3. THE MUSHROOM CLASS
+   
 The user thinks of one of six mushrooms and answers Yes or No to each
 question. The program uses the answers to find the mushroom.
 
@@ -68,6 +71,7 @@ Questions and results:
 
 
 4. HOW THE CLASSES ARE CONNECTED
+   
 
     Welcome  ->  BicycleRental  ->  back to Welcome
     Welcome  ->  Mushroom       ->  back to Welcome
@@ -94,6 +98,7 @@ They need a Welcome window to be created, so they cannot start by themselves.
 
 
 5. THE WAY TO RUN
+   
 
     1. Put the three files in the package "Welcome".
     2. Run Welcome.java.
