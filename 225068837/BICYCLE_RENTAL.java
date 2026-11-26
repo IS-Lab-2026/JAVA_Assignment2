@@ -2,23 +2,58 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.gui_main;
+package com.mycompany.systems;
+
+import javax.swing.JOptionPane;
+
+   
 
 /**
  *
- * @author Gueest
+ * @author hp
  */
-public class Rental extends javax.swing.JFrame {
+public class rental extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Rental.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(rental.class.getName());
 
     /**
-     * Creates new form Rental
+     * Creates new form rental
      */
-    public Rental() {
+     public rental() {
         initComponents();
     }
+    public int calculateRentalCost(int startTime, int endTime) {
 
+    if (startTime < 0 || startTime > 23 ||
+        endTime < 1 || endTime > 24 ||
+        startTime >= endTime) {
+
+        throw new IllegalArgumentException("Invalid time!");
+    }
+
+    int amount = 0;
+
+    for (int hour = startTime; hour < endTime; hour++) {
+
+        if (hour < 7) {
+            amount += 500;
+        } 
+        else if (hour < 14) {
+            amount += 1000;
+        } 
+        else if (hour < 19) {
+            amount += 1500;
+        } 
+        else if (hour < 21) {
+            amount += 1000;
+        } 
+        else {
+            amount += 500;
+        }
+    }
+
+    return amount;
+} 
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -28,142 +63,153 @@ public class Rental extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Lblstart = new javax.swing.JLabel();
-        LblEnd = new javax.swing.JLabel();
-        LblPay = new javax.swing.JLabel();
-        Txtstart = new javax.swing.JTextField();
-        TxtEnd = new javax.swing.JTextField();
-        TxtPay = new javax.swing.JTextField();
-        TxtWelcome = new javax.swing.JLabel();
-        btncalc = new javax.swing.JButton();
-        btncancel = new javax.swing.JButton();
-        btnClear = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        stime = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        etime = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        total = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Lblstart.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Lblstart.setText("Start Time:");
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+        jLabel1.setText("BICYCLE RENTAL SYSTEM");
 
-        LblEnd.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        LblEnd.setText("End Time: ");
-        LblEnd.setToolTipText("");
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setText("Starting time ");
 
-        LblPay.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        LblPay.setText("Payment:");
+        stime.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        stime.setForeground(new java.awt.Color(0, 0, 204));
 
-        TxtWelcome.setFont(new java.awt.Font("Segoe UI", 2, 24)); // NOI18N
-        TxtWelcome.setForeground(new java.awt.Color(0, 102, 0));
-        TxtWelcome.setText("Welcome Bicycle Rental");
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setText("End time");
 
-        btncalc.setText("Calculate");
-        btncalc.addActionListener(this::btncalcActionPerformed);
+        etime.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        etime.setForeground(new java.awt.Color(0, 0, 153));
 
-        btncancel.setText("Cancel");
-        btncancel.addActionListener(this::btncancelActionPerformed);
+        jButton1.setBackground(new java.awt.Color(0, 153, 153));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setText("CALCULATE");
+        jButton1.addActionListener(this::jButton1ActionPerformed);
 
-        btnClear.setText("Clear");
-        btnClear.addActionListener(this::btnClearActionPerformed);
+        total.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        total.setForeground(new java.awt.Color(0, 153, 51));
+        total.addActionListener(this::totalActionPerformed);
+
+        jButton2.setBackground(new java.awt.Color(204, 204, 255));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton2.setText("CLEAR");
+        jButton2.addActionListener(this::jButton2ActionPerformed);
+
+        jButton3.setBackground(new java.awt.Color(204, 0, 0));
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton3.setText("EXIT");
+        jButton3.addActionListener(this::jButton3ActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Lblstart)
-                            .addComponent(LblEnd)
-                            .addComponent(LblPay))
-                        .addGap(30, 30, 30)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Txtstart)
-                            .addComponent(TxtEnd)
-                            .addComponent(TxtPay)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton3))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addComponent(TxtWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(53, 53, 53)
-                        .addComponent(btncalc)
-                        .addGap(87, 87, 87)
-                        .addComponent(btncancel)))
-                .addGap(14, 14, 14)
-                .addComponent(btnClear)
-                .addContainerGap(304, Short.MAX_VALUE))
+                        .addContainerGap(40, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(stime)
+                                .addComponent(etime)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(210, 210, 210)
+                                    .addComponent(jLabel2))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(213, 213, 213)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(total)))))
+                .addGap(34, 34, 34))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(TxtWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22)
+                .addComponent(jLabel1)
                 .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Lblstart)
-                    .addComponent(Txtstart, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LblEnd)
-                    .addComponent(TxtEnd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LblPay)
-                    .addComponent(TxtPay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btncalc)
-                    .addComponent(btncancel)
-                    .addComponent(btnClear))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(stime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel3)
+                .addGap(9, 9, 9)
+                .addComponent(etime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE))
+                .addGap(12, 12, 12)
+                .addComponent(total, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btncalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncalcActionPerformed
-        try {
-        int Stime = Integer.parseInt(Txtstart.getText().trim());
-        int Etime = Integer.parseInt(TxtEnd.getText().trim());
-        int Rental=0;
-        if (Stime > Etime){
-          TxtPay.setText("Invalid") ;
-        }
-        else if((Stime<0 || Stime >23) ||(Etime <1 || Etime> 24)) {
-          TxtPay.setText ("Invalid");
-        }  
-        
-        else{
-            for (int i = Stime; i < Etime; i++) {
-            if((i>=0 && i<7) ||(i>=21 && i<24)) {
-                Rental= Rental+500;
-            }
-            else if((i>=7 && i<14) || (i>=19 && i<21)){
-                Rental= Rental+1000;
-            }
-            else if(i>=14 && i<=19){
-                Rental= Rental+1500;
-            }
-            }
-            TxtPay.setText(Rental + " RWF");
-        }} 
-        catch (NumberFormatException e) {
-                    TxtPay.setText("Invalid");
-                }
-   
-    }//GEN-LAST:event_btncalcActionPerformed
+    private void totalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_totalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_totalActionPerformed
 
-    private void btncancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncancelActionPerformed
-        Welcome back = new Welcome();// TODO add your handling code here:
-        back.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btncancelActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+     System.exit(0);         // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
-        Txtstart.setText("");// TODO add your handling code here:
-        TxtEnd.setText("");
-        TxtPay.setText("");
-    }//GEN-LAST:event_btnClearActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+     stime.setText("");
+     etime.setText("");
+     total.setText("");        // TODO add your handling code here:
+                                         
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+            try {
+
+    int start = Integer.parseInt(stime.getText().trim());
+
+    int end = Integer.parseInt(etime.getText().trim());
+
+    int result = calculateRentalCost(start, end);
+
+    total.setText(result + " RWF");
+
+} 
+catch (NumberFormatException ex) {
+
+    JOptionPane.showMessageDialog(this,
+        "Please enter valid numbers!");
+
+} 
+catch (IllegalArgumentException ex) {
+
+    total.setText("");
+
+    JOptionPane.showMessageDialog(this,
+        ex.getMessage());
+
+}            // TODO add your handling code here:
+                                             
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -187,19 +233,19 @@ public class Rental extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new Rental().setVisible(true));
+       //java.awt.EventQueue.invokeLater(() -> new rental().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel LblEnd;
-    private javax.swing.JLabel LblPay;
-    private javax.swing.JLabel Lblstart;
-    private javax.swing.JTextField TxtEnd;
-    private javax.swing.JTextField TxtPay;
-    private javax.swing.JLabel TxtWelcome;
-    private javax.swing.JTextField Txtstart;
-    private javax.swing.JButton btnClear;
-    private javax.swing.JButton btncalc;
-    private javax.swing.JButton btncancel;
+    private javax.swing.JTextField etime;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField stime;
+    private javax.swing.JTextField total;
     // End of variables declaration//GEN-END:variables
+
 }
