@@ -1,8 +1,7 @@
-# 🚲🍄 Bicycle & Mushroom Java App
+NAME: NIYUBAHWE Ben Deolis      225053280
+# Bicycle & Mushroom Java App
 
-A clean, interactive Java Swing desktop application that combines two everyday utilities into one unified interface: a **Bicycle Rental Cost Calculator** and a step-by-step **Mushroom Identifier**.
-
----
+A clean, interactive Java Swing desktop application that combines two everyday utilities into one unified interface: a **Bicycle Rental Cost Calculator** and a step-by-step **Mushroom Identifier**
 
 ## 1. Project Overview
 
@@ -87,10 +86,7 @@ com/mycompany/bicycle_mushroom/
 3. Run the main class:
    ```bash
    java com.mycompany.bicycle_mushroom.Bicycle_Mushroom
-   ```
 
----
 
-## 6. Safety Disclaimer
 
-The **Mushroom Identifier** is intended strictly for educational and software demonstration purposes. **Never consume wild mushrooms** based solely on software identification.
+
