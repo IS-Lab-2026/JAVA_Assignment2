@@ -1,4 +1,5 @@
-                    DESCRIPTION ABOUT PROGRAM
+                 DESCRIPTION ABOUT PROGRAM
+
 
  INTRODUCTION
 
@@ -32,16 +33,17 @@ The program then calculates the total cost.
 Buttons:
     Calculate Cost: Shows the total cost in RWF.
     
-    Clear :Resets the hours and the cost.
-    
-    Cancel :Closes this window and returns to Welcome.
+ Clear :Resets the hours and the cost.
+
+Cancel :Closes this window and returns to Welcome   
+
 
 Price per hour:
     00:00 to 07:00 and 21:00 to 24:00    500 RWF
     
-    07:00 to 14:00 and 19:00 to 21:00    1000 RWF
-    
-    14:00 to 19:00                       1500 RWF
+ 07:00 to 14:00 and 19:00 to 21:00    1000 RWF
+
+14:00 to 19:00                       1500 RWF
 
 If the starting hour is not smaller than the ending hour, an error message
 is shown.
@@ -54,9 +56,9 @@ question. The program uses the answers to find the mushroom.
 Buttons:
     Yes / No   Answer the current question.
     
-    Restart    Go back to the first question.
-    
-    Cancel     Close this window and return to Welcome.
+Restart    Go back to the first question.
+
+Cancel     Close this window and return to Welcome.
 
 The program remembers the current question in a variable called "step
 
@@ -101,21 +103,20 @@ No ->Girolle
     Welcome  ->  Mushroom       ->  back to Welcome
 
 Explanations;
+1. The user runs Welcome and sees the menu.
 
-    1. The user runs Welcome and sees the menu.
-    
-    2. The user clicks Bicyclerental or Mushroom.
-    
-    3. Welcome hides itself and creates the new window, giving itself to it:
-           new BicycleRental(this)
-           new Mushroom(this)
-       Here, "this" means the Welcome window.
-       
-    4. The new window stores this Welcome window in a variable.
-    
-    5. When the user clicks Cancel or closes the window, it calls
-       dispose() to close itself, then welcome.setVisible(true) to show
-       the menu again.
+2. The user clicks Bicyclerental or Mushroom.
+
+3. Welcome hides itself and creates the new window, giving itself to it:
+       new BicycleRental(this)
+       new Mushroom(this)
+   Here, "this" means the Welcome window.
+   
+4. The new window stores this Welcome window in a variable.
+
+5. When the user clicks Cancel or closes the window, it calls
+   dispose() to close itself, then welcome.setVisible(true) to show
+   the menu again.
 
 Why is Welcome passed to the other classes?
 A window can only show another window if it holds a reference to it. Passing
@@ -129,13 +130,13 @@ They need a Welcome window to be created, so they cannot start by themselves.
 5. THE WAY TO RUN
    
 
-    1. Put the three files in the package "Welcome".
+    . Put the three files in the package "Welcome".
        
-    3. Run Welcome.java.
+    . Run Welcome.java.
   
-    5. Click a button to open a window, and Cancel to return to the menu.
+    . Click a button to open a window, and Cancel to return to the menu.
        
-    7. If changes do not appear, use Clean and Build, then run again.
+    . If changes do not appear, use Clean and Build, then run again.
 
 
 
