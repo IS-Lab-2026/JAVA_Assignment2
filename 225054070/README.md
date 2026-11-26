@@ -45,17 +45,19 @@ The application uses the following Java libraries:
 
 The project contains two main Java source files, each with a different responsibility.
 
-**Main.java**— Main Application Logic
+-**Main.java**  — Main Application Logic
 This is the main program file that combines the two systems:
-Mushroom Identification System.
-Bicycle Rental System.
+-Mushroom Identification System.
+-Bicycle Rental System.
 It contains the program logic responsible for processing the operations of both systems.
-**MushGUI.java** — Graphical User Interface
+-**MushGUI.java**  — Graphical User Interface
 This file is responsible for creating the graphical interface through which users interact with the application.
+
 It creates:
-A welcome window where users can access either system.
-A Mushroom Identification window with Yes, No, and Back buttons.
-A Bicycle Rental window with starting-time and ending-time input fields, a Check button, and an output area for the rental cost.
+
+.A welcome window where users can access either system.
+.A Mushroom Identification window with Yes, No, and Back buttons.
+.A Bicycle Rental window with starting-time and ending-time input fields, a Check button, and an output area for the rental cost.
 
 **Important distinction:** Main.java handles the application logic for both systems, while MushGUI.java provides the graphical interface. They work together as parts of one application.
 
