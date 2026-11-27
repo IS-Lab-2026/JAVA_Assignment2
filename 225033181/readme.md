@@ -10,7 +10,7 @@ The projects demonstrate graphical user interface design, event handling, input 
 
 ---
 
-## 🚲 Bicycle Rental System
+##  Bicycle Rental System
 
 A desktop application that calculates the rental cost of a bicycle based on the selected start and end hours.
 
@@ -52,7 +52,7 @@ The application calculates the cost one hour at a time. If a rental crosses more
 
 ---
 
-## 🍄 Mushroom Identifier
+##  Mushroom Identifier
 
 A Java Swing application that uses a set of Yes/No questions to identify a mushroom from a small predefined set of outcomes.
 
@@ -92,14 +92,14 @@ If the first question has no selected answer, the application displays `Invalid 
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - **Language:** Java
 - **GUI Framework:** Java Swing
 - **IDE / GUI Builder:** NetBeans (as indicated by the generated Swing form code)
 - **Look and Feel:** Nimbus (when available)
 
-## ▶️ How to Run
+##  How to Run
 
 1. Install a Java Development Kit (JDK).
 2. Open the project in NetBeans or another Java IDE that supports Swing.
