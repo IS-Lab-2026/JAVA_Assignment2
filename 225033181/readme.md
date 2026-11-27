@@ -1,137 +1,26 @@
-# Java Swing GUI Projects
+# GUI_mains — Java Swing assignment
 
-A collection of beginner-friendly Java desktop applications built with **Java Swing**.  
-The projects demonstrate graphical user interface design, event handling, input validation, and basic decision-making logic.
+The program opens a Welcome window with two exercises. **Bicycle Rental** calculates a charge in Rwandan francs (RWF). **Mushroom** identifies one of six mushrooms from a series of yes/no answers.
 
-## Projects
+## What each class does
 
-- [Bicycle Rental System](#-bicycle-rental-system)
-- [Mushroom Identifier](#-mushroom-identifier)
+| Java file | Role |
+| --- | --- |
+| `GUI_mains.java` | Starts the application in `main()` and displays the Welcome frame. The Bicycle Rental and Mushroom buttons open their respective frames and close Welcome. Exit ends the program. |
+| `BicycleRentalForm.java` | Reads the starting and ending hours, calls the rental calculation, and displays the result. Invalid input clears the result and shows a warning. |
+| `BicycleRental.java` | Validates the hours and adds the price of each rental hour in `calculateRent(startTime, endTime)`. |
+| `MushroomForm.java` | Displays the mushroom list, starts the game, opens a dialog for each question, and displays the final name or “Guess cancelled”. |
+| `MushroomGuess.java` | Uses `if/else` decisions in `identify()` to choose the next question or return a mushroom name. Its `QuestionAsker` interface defines one method that takes a question and returns a yes/no answer. |
+| `MushroomQuestionDialog.java` | Shows one question and waits for a click. Yes returns `true`, No returns `false`, and Cancel or closing the dialog returns `null`. |
 
----
+## How the buttons and classes work together
 
-##  Bicycle Rental System
+**Calculate Rent.** Clicking the button or pressing Enter in the ending-hour field runs `btnCalculateActionPerformed`. It converts the two text values into whole numbers and calls `BicycleRental.calculateRent()`. The loop counts from the starting hour up to, but excluding, the ending hour. For a rental from 12:00 to 16:00, two hours cost 1,000 RWF each and two cost 1,500 RWF each. The form displays **5000 RWF**.
 
-A desktop application that calculates the rental cost of a bicycle based on the selected start and end hours.
+**Guess Mushroom.** The Guess button calls `MushroomGuess.identify(this::askYesNo)`. Here, `this::askYesNo` tells the decision code which method to call whenever it needs an answer. That method opens the question dialog. For example, answering **No** to “Does your mushroom have gills?” returns **Cepe de Bordeaux**. Cancelling the dialog stops the current guess. Clicking Cancel on either exercise frame returns to Welcome.
 
-### Features
+## How to run and edit
 
-- Enter a rental start time and end time.
-- Validate that the entered hours are within the accepted range.
-- Calculate the rental cost using different hourly rates.
-- Display the total payment in RWF.
-- Cancel the rental screen and return to the welcome screen.
+Open the project folder containing `pom.xml` in NetBeans and press **F6**. The three frames and the question dialog each have a matching `.java` and `.form` file. NetBeans reads the `.form` layout in **Design** view. At runtime, `initComponents()` creates the controls, arranges them, and connects each button to its event handler. Double-click a button in Design to edit what happens when it is clicked.
 
-### Hourly Pricing
-
-| Time period | Rate per hour |
-|---|---:|
-| 00:00–07:00 | 500 RWF |
-| 07:00–14:00 | 1,000 RWF |
-| 14:00–19:00 | 1,500 RWF |
-| 19:00–21:00 | 1,000 RWF |
-| 21:00–24:00 | 500 RWF |
-
-The application calculates the cost one hour at a time. If a rental crosses more than one pricing period, each hour is charged at the rate for that period.
-
-### Input Validation
-
-- Start time must be from `0` to `23`.
-- End time must be from `1` to `24`.
-- Start time must be earlier than end time.
-- Non-numeric input displays an error message.
-
-### Main Java Concepts
-
-- `JFrame`, `JLabel`, `JTextField`, and `JButton`
-- `ActionListener` event handling
-- `Integer.parseInt()` for converting input
-- `try-catch` for handling invalid numeric input
-- `if-else` statements and `for` loops
-- `JOptionPane` for displaying error messages
-
----
-
-##  Mushroom Identifier
-
-A Java Swing application that uses a set of Yes/No questions to identify a mushroom from a small predefined set of outcomes.
-
-### Questions
-
-The interface asks the user questions about the mushroom, including:
-
-1. Does it have gills?
-2. Does it grow in a forest?
-3. Does it have a convex cup?
-4. Does it have a ring?
-
-The user selects answers using radio buttons and clicks the **Action** button to display the result.
-
-### Possible Results
-
-Depending on the selected answers, the current program can display:
-
-- Pied bleu
-- Cepe de bordeaux
-- Coprin chevelu
-- Amanite tue-mouche
-- Agaric Jaunissant
-
-If the first question has no selected answer, the application displays `Invalid input`.
-
-> **Important:** This application is a simple programming demonstration, not a reliable mushroom safety or identification tool. Never eat a mushroom based on this program's result.
-
-### Main Java Concepts
-
-- `JFrame` for the application window
-- `JRadioButton` for Yes/No choices
-- `ButtonGroup` for mutually exclusive selections
-- `JButton` for triggering the identification logic
-- `if-else` statements for decision-making
-- `setText()` for displaying the result
-
----
-
-##  Technologies Used
-
-- **Language:** Java
-- **GUI Framework:** Java Swing
-- **IDE / GUI Builder:** NetBeans (as indicated by the generated Swing form code)
-- **Look and Feel:** Nimbus (when available)
-
-##  How to Run
-
-1. Install a Java Development Kit (JDK).
-2. Open the project in NetBeans or another Java IDE that supports Swing.
-3. Make sure the source files are in the package:
-
-   ```text
-   com.mycompany.gui.maine
-   ```
-
-4. Build the project.
-5. Run the relevant class:
-   - `Bicyclerental` to launch the Bicycle Rental application.
-   - `Mushroom` to launch the Mushroom Identifier.
-
-The Mushroom Identifier's cancel button and the Bicycle Rental screen's cancel button expect a `Welcome` class to exist in the same package.
-
-## 📁 Main Source Files
-
-| File | Description |
-|---|---|
-| `Bicyclerental.java` | Bicycle rental cost calculator GUI |
-| `Mushroom.java` | Yes/No mushroom decision application |
-| `Welcome.java` | Welcome screen opened by the cancel buttons; required by the applications |
-
-## 📚 Learning Objectives
-
-These projects provide practice with:
-
-- Building desktop interfaces with Java Swing
-- Organizing Java classes and packages
-- Responding to button clicks
-- Reading and validating user input
-- Using conditional statements and loops
-- Displaying results and error messages
-
+The two exercise classes also have console entry points. They read keyboard input and reuse the same rental calculation and mushroom decisions as the graphical application.
