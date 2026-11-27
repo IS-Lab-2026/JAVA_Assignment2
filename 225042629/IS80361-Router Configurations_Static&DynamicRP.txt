@@ -1,0 +1,78 @@
+Static Routing Protocol
+
+R1
+ip route 10.10.1.64 255.255.255.192 10.10.1.194
+ip route 10.10.1.128 255.255.255.224 10.10.1.194
+ip route 10.10.1.160 255.255.255.224 10.10.1.194
+ip route 10.10.1.196 255.255.255.252 10.10.1.194
+ip route 10.10.1.200 255.255.255.252 10.10.1.194
+
+R2
+
+ip route 10.10.1.0 255.255.255.192 10.10.1.193
+ip route 10.10.1.128 255.255.255.224 10.10.1.198
+ip route 10.10.1.160 255.255.255.224 10.10.1.198
+ip route 10.10.1.200 255.255.255.252 10.10.1.198
+
+R3
+
+ip route 10.10.1.0 255.255.255.192 10.10.1.197
+ip route 10.10.1.64 255.255.255.192 10.10.1.197
+ip route 10.10.1.160 255.255.255.224 10.10.1.202
+ip route 10.10.1.192 255.255.255.252 10.10.1.197
+
+R4
+ip route 10.10.1.0 255.255.255.192 10.10.1.201
+ip route 10.10.1.64 255.255.255.192 10.10.1.201
+ip route 10.10.1.128 255.255.255.224 10.10.1.201
+ip route 10.10.1.160 255.255.255.224 10.10.1.201
+ip route 10.10.1.192 255.255.255.252 10.10.1.201
+ip route 10.10.1.196 255.255.255.252 10.10.1.201
+
+Dynamic routing protocol: OSPF
+
+R1
+router ospf 1
+network 10.10.1.0 0.0.0.63 area 0
+network 10.10.1.192 0.0.0.3 area 0
+
+R2
+
+router ospf 1
+network 10.10.1.64 0.0.0.63 area 0
+network 10.10.1.192 0.0.0.3 area 0
+network 10.10.1.196 0.0.0.3 area 0
+
+R3
+
+router ospf 1
+network 10.10.1.128 0.0.0.31 area 0
+network 10.10.1.200 0.0.0.3 area 0
+network 10.10.1.196 0.0.0.3 area 0
+
+R4
+
+router ospf 1
+network 10.10.1.160 0.0.0.31 area 0
+network 10.10.1.200 0.0.0.3 area 0
+
+or 
+
+int g0/0
+ip ospf 1 area 0
+int se0/0/0 
+ip ospf 1 area 0
+
+Dynamic routing protocol: EIGRP
+
+R1
+router eigrp 1
+network 10.10.1.0 
+network 10.10.1.192 
+
+or 
+
+int g0/0
+ip eigrp 1
+int se0/0/0 
+ip eigrp 1
